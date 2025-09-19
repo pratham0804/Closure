@@ -1,5 +1,5 @@
 # Closure
-# JavaScript Closures Explained 🚀
+# JavaScript Closures Explained 
 
 ## Understanding Closures from Ground Up
 
@@ -53,7 +53,7 @@ function outerFunction(x) {
     
     function innerFunction(y) {
         console.log("I'm in inner function, y =", y);
-        console.log("But I can also see x =", x); // 🎯 This is the magic!
+        console.log("But I can also see x =", x); //  This is the magic!
         return x + y;
     }
     
@@ -116,7 +116,7 @@ EXECUTION CONTEXT STACK:
 ├── Returns: 15 (x + y = 10 + 5)
 ```
 
-**🔥 Key Insight:** Even though the outer function finished executing, its variable `x` stayed alive because the inner function still needs it. This is a **CLOSURE**!
+**Key Insight:** Even though the outer function finished executing, its variable `x` stayed alive because the inner function still needs it. This is a **CLOSURE**!
 
 ---
 
@@ -158,11 +158,11 @@ console.log(sayGoodbye("Jane"));  // "Goodbye Jane"
 
 **After `createGreeting` returns:**
 ```
-[sayHello closure] 🔐
+[sayHello closure] 
 ├── message: "Hello" ← Captured from createGreeting
 ├── greet function code
 
-[sayGoodbye closure] 🔐
+[sayGoodbye closure] 
 ├── message: "Goodbye" ← Captured from createGreeting  
 ├── greet function code
 ```
@@ -209,7 +209,7 @@ var result = step2(30);      // Returns 60
 
 #### Step 2: `level1` returns, but context stays alive
 ```
-[Level1 Context - CLOSURE] 🔐
+[Level1 Context - CLOSURE] 
 ├── a: 10 ← level2 needs this
 
 [step1 variable]
@@ -219,7 +219,7 @@ var result = step2(30);      // Returns 60
 
 #### Step 3: `step1(20)` calls `level2(20)`
 ```
-[Level1 Context - CLOSURE] 🔐
+[Level1 Context - CLOSURE] 
 ├── a: 10 ← Still alive
 
 [Level2 Execution Context]
@@ -230,10 +230,10 @@ var result = step2(30);      // Returns 60
 
 #### Step 4: `level2` returns, creating another closure
 ```
-[Level1 Context - CLOSURE] 🔐
+[Level1 Context - CLOSURE] 
 ├── a: 10 ← Still needed
 
-[Level2 Context - CLOSURE] 🔐
+[Level2 Context - CLOSURE] 
 ├── b: 20 ← level3 needs this
 
 [step2 variable]
@@ -243,10 +243,10 @@ var result = step2(30);      // Returns 60
 
 #### Step 5: `step2(30)` calls `level3(30)`
 ```
-[Level1 Context - CLOSURE] 🔐
+[Level1 Context - CLOSURE] 
 ├── a: 10 ← Still alive
 
-[Level2 Context - CLOSURE] 🔐
+[Level2 Context - CLOSURE] 
 ├── b: 20 ← Still alive
 
 [Level3 Execution Context] 
@@ -256,7 +256,7 @@ var result = step2(30);      // Returns 60
 ├── Returns: a + b + c = 10 + 20 + 30 = 60
 ```
 
-**🌟 Amazing Result:** The `level3` function has access to variables from **ALL** outer functions through the closure chain!
+** Amazing Result:** The `level3` function has access to variables from **ALL** outer functions through the closure chain!
 
 ---
 
@@ -284,7 +284,7 @@ function mystery(x) {
 }
 
 var func = mystery(5);
-console.log(func(3)); // What will this print? 🤔
+console.log(func(3)); // What will this print? 
 ```
 
 <details>
@@ -316,4 +316,3 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Happy coding! 🎉**
